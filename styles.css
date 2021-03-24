@@ -16,6 +16,7 @@ body {
 
 .main-title h1 {
     font-weight: 400;
+    cursor: default;
 }
 
 .main-title button {
@@ -27,12 +28,48 @@ body {
     height: 3rem;
     width: 3rem;
     outline: none;
-    transition-duration: 0.3s;
+    transition-duration: .1s;
     cursor: pointer;
 }
 
 .main-title button:active {
     background-color: rgb(156, 141, 0);
+}
+
+.input-block {
+    background-color: white;
+    width: 35rem;
+    height: auto;
+    border-radius: 1rem;
+    margin: auto;
+    padding: 1px 20px 1.5rem 20px;
+    margin-block-end: 2rem;
+}
+
+.input-block input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(226, 226, 226);
+    padding-bottom: 5px;
+    outline: none;
+}
+
+.input-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.input-text {
+    font-family: 'Lexend', sans-serif;
+    font-size: medium;
+    font-weight: 400;
+    border: none;
+    overflow: hidden;
+    resize: none;
+    color: rgb(153, 153, 153);
+    width: 100%;
+    min-height: 6rem;
+    outline: none;
 }
 
 .render-block {
@@ -42,28 +79,34 @@ body {
     border-radius: 1rem;
     margin: auto;
     padding: 1px 20px 1.5rem 20px;
+    margin-block-start: 2rem;
+    margin-block-end: 2rem;
 }
 
-.render-block input {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid rgb(226, 226, 226);
-    outline: none;
+.render-header {
+    margin-top: 1.3rem;
+    display: flex;
+     border-bottom: 1px solid rgb(226, 226, 226);
 }
 
 .render-title {
     font-size: 2rem;
     font-weight: 600;
+    width: 100%;
+    border: none;
+    padding-bottom: 5px;
+    cursor: default;
 }
 
 .render-text {
-    font-family: 'Lexend', sans-serif;
-    font-weight: 400;
-    border: none;
-    overflow: hidden;
-    resize: none;
     color: rgb(153, 153, 153);
-    width: 100%;
-    min-height: 6rem;
+    cursor: default;
+}
+
+.render-button {
+    margin-inline-end: 0.1rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
     outline: none;
 }
