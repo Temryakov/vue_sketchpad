@@ -18,19 +18,52 @@ body {
     font-weight: 400;
 }
 
-.add-button {
+.main-title button {
     margin-left: 1rem;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
+    background-color: rgb(255, 230, 0);
+    color: black;
+    border: none;
     border-radius: 50%;
     height: 3rem;
     width: 3rem;
     outline: none;
     transition-duration: 0.3s;
+    cursor: pointer;
 }
 
-.add-button:hover {
+.main-title button:active {
+    background-color: rgb(156, 141, 0);
+}
+
+.render-block {
     background-color: white;
-    color: black;
+    width: 35rem;
+    height: auto;
+    border-radius: 1rem;
+    margin: auto;
+    padding: 1px 20px 1.5rem 20px;
+}
+
+.render-block input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(226, 226, 226);
+    outline: none;
+}
+
+.render-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.render-text {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    border: none;
+    overflow: hidden;
+    resize: none;
+    color: rgb(153, 153, 153);
+    width: 100%;
+    min-height: 6rem;
+    outline: none;
 }
