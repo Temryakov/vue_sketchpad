@@ -23,7 +23,7 @@
                         <p><textarea name='text' class='input-text' placeholder="Text"></textarea></p>
                     </div>
             </transition>
-            <div class='render-block'>
+            <div v-if='visibility' class='render-block'>
                 <div class='render-header'>
                     <div class='render-title'>{{title}}</div>
                     <button class='render-button'>
@@ -48,6 +48,7 @@
             var app = new Vue({
                 el: '#app',
                 data: {
+                    visibility: false,
                     show: false,
                     title: 'Hello, world',
                     text: 'Lorem ipsum dolor sit amet consecteturadipisicing elit. Est possimus optio sequi delectus alias id aliquam obcaecati ipsum ratione in, quasi ab, voluptates tempore ducimus quis cupiditate, voluptatum ex beatae?',
