@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&display=swap');
+
+body {
+    max-width: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    font-family: 'Lexend', sans-serif;
+}
+
+.main-title {
+    color: white;
+    display: flex;
+    margin-block-start: 3rem;
+    align-items: center;
+    justify-content: center;
+} 
+
+.main-title h1 {
+    font-weight: 400;
+    cursor: default;
+}
+
+.main-title button {
+    margin-left: 1rem;
+    background-color: rgb(255, 230, 0);
+    color: black;
+    border: none;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    outline: none;
+    transition-duration: .1s;
+    cursor: pointer;
+}
+
+.main-title button:active {
+    background-color: rgb(156, 141, 0);
+}
+
+.input-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    width: 70%;
+    height: auto;
+    border-radius: 1rem;
+    padding: 1px 20px 1.5rem 20px;
+    margin-block-end: 2rem;
+}
+
+.input-block input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(226, 226, 226);
+    padding-bottom: 5px;
+    outline: none;
+}
+
+.input-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+.input-text {
+    font-family: 'Lexend', sans-serif;
+    font-size: medium;
+    font-weight: 400;
+    border: none;
+    overflow: hidden;
+    resize: none;
+    color: rgb(153, 153, 153);
+    width: 100%;
+    min-height: 6rem;
+    outline: none;
+}
+
+.render-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    width: 70%;
+    height: auto;
+    border-radius: 1rem;
+    padding: 1px 20px 1.5rem 20px;
+    margin-block-start: 2rem;
+    margin-block-end: 2rem;
+}
+
+.render-header {
+    margin-top: 1.3rem;
+    display: flex;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.render-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    width: 100%;
+    border: none;
+    padding-bottom: 5px;
+    cursor: default;
+}
+
+.render-text {
+    color: rgb(153, 153, 153);
+    cursor: default;
+}
+
+.render-button {
+    margin-inline-end: 0.1rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.slide-fade-enter-active {
+    transition: all .3s ease;
+  }
+  .slide-fade-leave-active {
+    transition: all .3s ease;
+  }
+  .slide-fade-enter, .slide-fade-leave-to {
+    transform: translateX(10px);
+    opacity: 0;
+  }

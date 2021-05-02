@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <link rel='stylesheet' href='styles.css'>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='mobile.css'>
+        <link rel="stylesheet" href="main.css" media="(min-width: 700px)">
         <title>Vue sketchpad</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -23,9 +25,6 @@
                             class='input-title' 
                             type="text" 
                             placeholder="Title"
-                            autocomplete="off"
-                            v-model="newNote"
-                            @keyup.enter="addNote"
                         ></h3>
                         <p><textarea name='text' class='input-text' placeholder="Text"></textarea></p>
                     </div>
