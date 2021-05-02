@@ -9,6 +9,16 @@ body {
     font-family: 'Lexend', sans-serif;
 }
 
+.svg-change {
+    width: 15px;
+    height: 15px;
+}
+
+.svg-remove {
+    width: 20px;
+    height: 20px;
+}
+
 .main-title {
     color: white;
     display: flex;
