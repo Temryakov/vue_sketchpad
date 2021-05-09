@@ -1,5 +1,5 @@
 {
-  "name": "sketchpad",
+  "name": "vue_sketchpad",
   "version": "1.0.0",
   "description": "This app will provide sketchpad function. You will be able to add some notes, remove it and change.  https://temryakov.github.io/vue_sketchpad/",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/temryakov/vue_sketchpad.git"
   },
-  "author": "Temryakov Maxim",
+  "author": "Maxim Temryakov <mtemryakov@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/temryakov/vue_sketchpad/issues"
