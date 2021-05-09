@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='mobile.css'>
+        <link rel="stylesheet" href="main.css" media="(min-width: 700px)">
+        <title>Vue sketchpad</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script defer src="bundle.js"></script></head>
+    <body>
+        <div id='app'>
+            <div class='main-title'>
+                <h1>Sketchpad</h1>
+                <button @click="show = !show">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+                        <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                    </svg>
+                </button>
+            </div>
+            <transition name="slide-fade">
+                    <div v-if='show' class='input-block'>
+                        <h3><input 
+                            class='input-title' 
+                            type="text" 
+                            placeholder="Title"
+                        ></h3>
+                        <p><textarea name='text' class='input-text' placeholder="Text"></textarea></p>
+                    </div>
+            </transition>
+            <transition name='render-block'>
+                <div class='render-block'>
+                    <div class='render-header'>
+                        <div class='render-title'>{{title}}</div>
+                        <button class='render-button'>
+                            <svg class='svg-change' xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                            </svg>
+                        </button>
+                        <button class='render-button'>
+                            <svg class='svg-remove' xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class='render-text'>
+                        {{text}}
+                    </p>
+                    <div class='render-footer'>
+                    </div>
+                </div>
+            </transition>
+        </div>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    visibility: true,
+                    show: false,
+                    title: 'Hello, world',
+                    text: 'Lorem ipsum dolor sit amet consecteturadipisicing elit. Est possimus optio sequi delectus alias id aliquam obcaecati ipsum ratione in, quasi ab, voluptates tempore ducimus quis cupiditate, voluptatum ex beatae?',
+                }
+            })
+        </script>
+    </body>
+</html>
